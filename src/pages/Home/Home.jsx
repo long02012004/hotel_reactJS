@@ -1,8 +1,13 @@
+import VideoHome from"../../assets/Video/videohome.mp4";
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+  <>
+      <video  autoPlay loop muted >
+        <source 
+        src={VideoHome} 
+        type="video/mp4" />
+      </video>  
+  </>
   );
 };
 

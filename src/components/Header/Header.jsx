@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate, NavLink } from "react-router-dom";
 import { logo, avatar } from "../../assets/images/img";
 import styles from "./Header.module.scss";
 
@@ -30,39 +30,39 @@ const Header = ({ isLoggedIn }) => {
           </button>
           <ul className={`${styles.nav} ${navActive ? styles.active : ""}`}>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/">
+              <NavLink className={styles.nav__link} to="/home">
                 Trang chủ
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/food">
+              <NavLink className={styles.nav__link} to="/food">
                 Ẩm thực
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/convenient">
+              <NavLink className={styles.nav__link} to="/convenient">
                 Tiện Ích
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/blog">
+              <NavLink className={styles.nav__link} to="/blog">
                 Blog
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/endow">
+              <NavLink className={styles.nav__link} to="/endow">
                 Ưu Đãi
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/viewroom">
+              <NavLink className={styles.nav__link} to="/viewroom">
                 Xem Phòng
-              </Link>
+              </NavLink>
             </li>
             <li className={styles.nav__item}>
-              <Link className={styles.nav__link} to="/contact">
+              <NavLink className={styles.nav__link} to="/contact">
                 Liên hệ
-              </Link>
+              </NavLink>
             </li>
 
             <li className={`${styles.nav__item} ${styles.nav__lang}`}>

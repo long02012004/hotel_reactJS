@@ -67,6 +67,9 @@
     text-decoration: none;
     padding: 0 20px;
     display: block;
+    &:hover {
+      color: aqua;
+    }
   }
 
   &__subnav {

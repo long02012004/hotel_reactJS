@@ -5,6 +5,7 @@ import styles from "./Login.module.scss";
 const LogIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -45,7 +46,7 @@ const LogIn = () => {
       <div className={styles["forgot-password"]}>
         <span>Quên mật khẩu</span>
         <span>
-          <Link to="/sign-up">Đăng ký</Link>
+          <Link to="/sign-up" className={styles["sign-up"]}>Đăng ký</Link>
         </span>
       </div>
     </div>
