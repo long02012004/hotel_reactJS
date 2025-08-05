@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { backgroundSignUp, flag, rocket } from "../../assets/images/img";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./SignUp.module.scss"; // Chuyển CSS sang SCSS module nếu dùng module
 
@@ -52,7 +53,7 @@ const SignUp = () => {
       <div className={styles["sign-up__image"]}>
         <img
           className={styles["sign-up__image-main"]}
-          src="/assets/images/background_sign_up.png"
+          src={backgroundSignUp}
           alt="Main"
         />
       </div>
@@ -61,7 +62,7 @@ const SignUp = () => {
         <div className={styles["sign-up__header"]}>
           <img
             className={styles["sign-up__header-flag"]}
-            src="/assets/images/flag.png"
+            src={flag}
             alt="Flag"
           />
           <i className="bx bx-chevron-down"></i>
@@ -71,15 +72,14 @@ const SignUp = () => {
           Đăng ký
           <img
             className={styles["sign-up__image-rocket"]}
-            src="/assets/images/rocket.png"
+            src={rocket}
             alt="Rocket"
           />
         </h2>
 
         <Link to="/home" className={styles["sign-up__google-link"]}>
           <button className={styles["sign-up__google-login"]}>
-            <i className="bx bxl-google"></i>
-            Đăng nhập với Google
+            <i class="fa-brands fa-google"></i> Đăng nhập với Google
           </button>
         </Link>
 
@@ -91,7 +91,7 @@ const SignUp = () => {
 
         <form onSubmit={handleSubmit} className={styles["sign-up__form"]}>
           <label htmlFor="email" className={styles["sign-up__label"]}>
-            Email hoặc Số Điện Thoại  
+            Email hoặc Số Điện Thoại
           </label>
           <input
             id="email"
@@ -119,7 +119,7 @@ const SignUp = () => {
               onChange={handleChange}
             />
             <div className={styles["sign-up__password-icon"]}>
-              <i className="bx bx-hide"></i>
+              <i className="fa-solid fa-eye-slash"></i>
             </div>
           </div>
 
@@ -141,7 +141,7 @@ const SignUp = () => {
               onChange={handleChange}
             />
             <div className={styles["sign-up__password-icon"]}>
-              <i className="bx bx-hide"></i>
+              <i className="fa-solid fa-eye-slash"></i>
             </div>
           </div>
 

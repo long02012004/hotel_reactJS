@@ -20,18 +20,19 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} >
-          <Route path="/home" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/convenient" element={<Convenient />} />
-          <Route path="/endow" element={<Endow />} />
-          <Route path="/food" element={<Food />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/viewroom" element={<ViewRoom />} />
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} /> {/* 👈 Trang mặc định */}
+          <Route path="home" element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="convenient" element={<Convenient />} />
+          <Route path="endow" element={<Endow />} />
+          <Route path="food" element={<Food />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="viewroom" element={<ViewRoom />} />
         </Route>
+        <Route path="sign-up" element={<SignUp />} />
+        <Route path="login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

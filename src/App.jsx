@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-
+import { Outlet } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header isLoggedIn={isLoggedIn} />
-      <Footer />
+      {/*    <Footer /> */}
     </>
   );
 }

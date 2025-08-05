@@ -18,7 +18,7 @@ const Header = ({ isLoggedIn }) => {
     <>
       <div className="header-container">
         <header className={styles.header}>
-          <Link to="/">
+          <Link to="/home">
             <img
               src={logo}
               alt="Khách Sạn ABC"
@@ -117,12 +117,12 @@ const Header = ({ isLoggedIn }) => {
             ) : (
               <>
                 <li className={styles.nav__item}>
-                  <Link className={styles.nav__link} to="/login">
+                  <Link className={styles.nav__btn} to="/login">
                     Đăng nhập
                   </Link>
                 </li>
                 <li className={styles.nav__item}>
-                  <Link className={styles.nav__link} to="/signup">
+                  <Link className={styles.nav__btn} to="/sign-up">
                     Đăng ký
                   </Link>
                 </li>
@@ -130,6 +130,7 @@ const Header = ({ isLoggedIn }) => {
             )}
           </ul>
         </header>
+        
       </div>
       <div className="main-container">
         <Outlet />
