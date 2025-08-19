@@ -85,7 +85,6 @@
   display: flex;
   background-color: rgba(239, 225, 214, 0.58);
   padding: 30px 0 30px 30px;
-
   width: 100%;
   height: 100vh;
   &__list {
@@ -136,15 +135,18 @@
     flex-direction: column;
     flex: 2;
     justify-content: center;
-    align-items: flex-start;
+   
     padding-right: 16px;
   }
   &__heading {
-    color: #334862;
-    display: block;
+    color: #47aed6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
+    text-align: center;
   }
   &__subheading {
     color: #334862;

@@ -65,7 +65,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footer__bottom}>
-        Copyright © Furama Resort. 2022 All Rights Reserved
+        Copyright © Furama Resort. 2025 All Rights Reserved
       </div>
     </footer>
   );

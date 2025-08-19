@@ -25,6 +25,23 @@ import food6 from "./food6.png";
 import food7 from "./food7.png";
 import food8 from "./food8.png";
 import food9 from "./food9.jpg";
+import food10 from "./food10.png";
+import food11 from "./food11.png";
+import food12 from "./food12.png";
+import food13 from "./food13.png";
+import food14 from "./food14.png";
+import food15 from "./food15.png";
+import food16 from "./food16.png";
+import food17 from "./food17.png";
+import food18 from "./food18.png";
+import food19 from "./food19.png";
+import food20 from "./food20.png";
+import food21 from "./food21.png";
+import food22 from "./food22.png";
+import food23 from "./food23.png";
+import bars1 from "./bars1.png";
+import bars2 from "./bars2.png";
+import bars3 from "./bars3.png";
 import hotel1 from "./hotel1.png";
 import hotel2 from "./hotel2.png";
 import hotel3 from "./hotel3.png";
@@ -69,11 +86,28 @@ export {
   food2,
   food3,
   food4,
+  bars1,
+  bars2,
+  bars3,
   food5,
   food6,
   food7,
   food8,
   food9,
+  food10,
+  food11,
+  food12,
+  food13,
+  food14,
+  food15,
+  food16,
+  food17,
+  food18,
+  food19,
+  food20,
+  food21,
+  food22,
+  food23,
   hotel1,
   hotel2,
   hotel3,

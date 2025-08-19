@@ -56,7 +56,7 @@ const Header = ({ isLoggedIn }) => {
             </li>
             <li className={styles.nav__item}>
               <NavLink className={styles.nav__link} to="/viewroom">
-                Xem Phòng
+                Đặt Phòng
               </NavLink>
             </li>
             <li className={styles.nav__item}>
@@ -130,7 +130,6 @@ const Header = ({ isLoggedIn }) => {
             )}
           </ul>
         </header>
-        
       </div>
       <div className="main-container">
         <Outlet />
