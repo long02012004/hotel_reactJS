@@ -1,3 +1,8 @@
+.scrolled .header {
+  background: #9a9898 !important; // khi cuộn thành màu trắng
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
 .header {
   width: 100%;
   display: flex;
@@ -10,6 +15,7 @@
   z-index: 10;
   justify-content: space-around;
   align-items: center;
+
   &__login {
     display: flex;
     max-width: 220px;
@@ -58,10 +64,9 @@
     display: inline-block;
     position: relative;
     width: auto;
-    
   }
   &__item::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 40px;
     left: 0;
@@ -82,7 +87,6 @@
       color: aqua;
       border-bottom: 2px solid aqua;
     }
-    
   }
 
   &__subnav {

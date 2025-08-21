@@ -63,8 +63,10 @@ import slider1 from "./slider1.png";
 import slider2 from "./slider2.png";
 import slider3 from "./slider3.png";
 import la from "./la.png";
+import blogPhu from "./blogPhu.png";
 
 export {
+  blogPhu,
   logo,
   rocket,
   avatar,

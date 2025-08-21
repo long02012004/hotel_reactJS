@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, Outlet, useNavigate, NavLink } from "react-router-dom";
 import { logo, avatar } from "../../assets/images/img";
 import styles from "./Header.module.scss";
 
 const Header = ({ isLoggedIn }) => {
   const [navActive, setNavActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleNav = () => setNavActive(!navActive);
   const navigate = useNavigate();
 
@@ -13,10 +14,24 @@ const Header = ({ isLoggedIn }) => {
     navigate("/login");
     window.location.reload(); // hoặc bạn có thể truyền hàm setIsLoggedIn(false)
   };
+  // đổi màu header khi cuộn
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <div className="header-container">
+      <div className={`header-container ${scrolled ? styles.scrolled : ""}`}>
         <header className={styles.header}>
           <Link to="/home">
             <img
@@ -56,7 +71,7 @@ const Header = ({ isLoggedIn }) => {
             </li>
             <li className={styles.nav__item}>
               <NavLink className={styles.nav__link} to="/viewroom">
-                Đặt Phòng
+                Tìm Phòng
               </NavLink>
             </li>
             <li className={styles.nav__item}>

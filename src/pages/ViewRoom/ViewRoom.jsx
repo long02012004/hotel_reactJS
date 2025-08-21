@@ -1,8 +1,13 @@
+import RoomHeader from "./RoomHeader";
+import styles from "./ViewRoom.module.scss";
+import RoomSelection from "./RoomSelection";
 const ViewRoom = () => {
   return (
-    <div>
-      <h1>View Room</h1>
-      <p>This is the View Room page.</p>
+    <div className={styles["view-room"]}>
+      <RoomHeader />
+      <div className={styles["room-selection"]}>
+        <RoomSelection />
+      </div>
     </div>
   );
 };
