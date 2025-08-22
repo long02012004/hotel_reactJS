@@ -1,8 +1,9 @@
 .scrolled .header {
   background: #9a9898 !important; // khi cuộn thành màu trắng
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
+
 }
+
 .header {
   width: 100%;
   display: flex;
@@ -11,6 +12,7 @@
   left: 0;
   right: 0;
   height: 80px;
+  white-space: nowrap;
   background: rgba(0, 0, 0, 0.2);
   z-index: 10;
   justify-content: space-around;
@@ -20,6 +22,7 @@
     display: flex;
     max-width: 220px;
     gap: 20px;
+
     a {
       display: flex;
       text-align: center;
@@ -65,6 +68,7 @@
     position: relative;
     width: auto;
   }
+
   &__item::before {
     content: "";
     position: absolute;
@@ -83,6 +87,7 @@
     padding: 0 20px;
     padding-bottom: 10px;
     display: block;
+
     &:hover {
       color: aqua;
       border-bottom: 2px solid aqua;
@@ -218,6 +223,7 @@
     padding: 12px 16px;
   }
 }
+
 .nav__btn {
   display: inline-block;
   padding: 8px 14px;
@@ -234,5 +240,19 @@
   &:hover {
     background-color: #dce2e5;
     color: #070202;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    gap: 18px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 12px;
+    font-size: .95rem;
   }
 }
