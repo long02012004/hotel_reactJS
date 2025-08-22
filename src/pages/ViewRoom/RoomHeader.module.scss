@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 16px 32px;
+  padding: 16px 0;
   font-family: "Segoe UI", sans-serif;
   color: #222;
 }
@@ -55,10 +55,13 @@
   .button-group {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
+    width: 320px;
     margin-left: 20px;
     margin-top: 40px;
+    background: #f9f9f9;
+    padding: 8px;
     .icon-lock {
       height: 30px;
       width: 30px;

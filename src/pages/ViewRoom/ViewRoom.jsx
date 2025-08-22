@@ -5,9 +5,7 @@ const ViewRoom = () => {
   return (
     <div className={styles["view-room"]}>
       <RoomHeader />
-      <div className={styles["room-selection"]}>
-        <RoomSelection />
-      </div>
+      <RoomSelection />
     </div>
   );
 };

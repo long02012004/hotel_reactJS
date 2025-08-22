@@ -2,6 +2,12 @@
   padding: 24px 40px;
   font-family: "Segoe UI", sans-serif;
   color: #333;
+  background-color: #fbfbfb;
+  .room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .section-title {
@@ -39,42 +45,28 @@
       }
     }
   }
-
-  .promo-right {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 10px 16px;
-    border-radius: 6px;
-    text-align: right;
-
-    p {
-      font-size: 13px;
-      color: #555;
-    }
-    span {
-      font-size: 18px;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-  }
 }
 
 .filter-bar {
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
-
   button {
-    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid #c62828;
+    color: #c62828;
     border-radius: 25px;
     padding: 8px 16px;
-    background: white;
+    background: rgb(227, 223, 223);
     cursor: pointer;
     font-size: 14px;
     transition: 0.3s;
 
     &:hover {
-      border-color: #c62828;
+      background: #c0aaaa;
       color: #c62828;
     }
   }
@@ -132,6 +124,96 @@
     .more-btn {
       border: 1px solid #c62828;
       background: transparent;
+      color: #c62828;
+      padding: 6px 12px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 13px;
+
+      &:hover {
+        background: #c62828;
+        color: white;
+      }
+    }
+  }
+
+  .room-package {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    margin-top: 12px;
+
+    h4 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+
+      li {
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #555;
+      }
+    }
+
+    .price-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fdeaea;
+      border: 1px solid #f4c7c3;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+
+      .sub-price {
+        font-size: 12px;
+        color: #777;
+      }
+
+      .main-price {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .old-price {
+          text-decoration: line-through;
+          color: #999;
+          font-size: 12px;
+        }
+        .discount {
+          color: #c62828;
+          font-weight: bold;
+          font-size: 12px;
+        }
+        .final-price {
+          font-size: 16px;
+          font-weight: bold;
+          color: #c62828;
+        }
+      }
+
+      .choose-btn {
+        background: #c62828;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 14px;
+
+        &:hover {
+          background: #a62222;
+        }
+      }
+    }
+
+    .view-all-btn {
+      border: 1px solid #c62828;
+      background: #fdeaea;
       color: #c62828;
       padding: 6px 12px;
       border-radius: 25px;
