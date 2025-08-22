@@ -6,35 +6,52 @@ import {
   FaCity,
   FaSmokingBan,
   FaWind,
-  
+  FaDog,
 } from "react-icons/fa";
-const RoomCard = () => {
+import { TbAirConditioning } from "react-icons/tb";
+import { CiWifiOn } from "react-icons/ci";
+
+const RoomCard = ({
+  image,
+  title,
+  guests,
+  size,
+  beds,
+  view,
+  address,
+  desc,
+  price,
+  oldPrice,
+  discount,
+  booking,
+}) => {
   return (
     <div className={styles["room-card"]}>
       {/* Hình ảnh */}
       <div className={styles["room-image"]}>
-        <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/455020064.jpg"
-          alt="Wink Luxe Cityview"
-        />
+        <img src={image} alt={title} />
       </div>
 
       {/* Thông tin phòng */}
       <div className={styles["room-info"]}>
-        <h3>Wink Luxe Cityview</h3>
-        <p className={styles["sub-info"]}>
-          <FaUsers /> tối đa 3 khách &nbsp;&nbsp; <FaRulerCombined /> 30 m²
-        </p>
+        <h3>{title}</h3>
+        <div className={styles["sub-info"]}>
+          <div>
+            <FaUsers /> tối đa {guests} khách &nbsp;&nbsp;
+          </div>
+          <div>
+            <FaRulerCombined /> {size} m²
+          </div>
+        </div>
 
         <div className={styles["features"]}>
+          {beds.map((bed, i) => (
+            <span key={i}>
+              <FaBed /> {bed}
+            </span>
+          ))}
           <span>
-            <FaBed /> Giường King size
-          </span>
-          <span>
-            <FaBed /> Giường tầng
-          </span>
-          <span>
-            <FaCity /> Quang cảnh thành phố
+            <FaCity /> {view}
           </span>
           <span>
             <FaSmokingBan /> Phòng không hút thuốc
@@ -42,20 +59,21 @@ const RoomCard = () => {
           <span>
             <FaWind /> Máy sấy tóc
           </span>
-          <span>+16</span>
+          <span>
+            <TbAirConditioning /> Máy lạnh
+          </span>
+          <span>
+            <CiWifiOn /> Wifi miễn phí
+          </span>
+          <span>
+            {" "}
+            <FaDog />
+            Cho phép thú cưng
+          </span>
         </div>
 
-        <p className={styles["address"]}>
-          550000, Da Nang, Hai Chau, 178 Tran Phu, Phuoc Ninh
-        </p>
-
-        <p className={styles["desc"]}>
-          (30sqm) Located at upper floor with 1 King and 1 Bunk bed. Come
-          together, stay together. Family Room with space to sprawl for
-          families...
-        </p>
-
-        <button className={styles["more-btn"]}>Hiển thị thêm ⌄</button>
+        <p className={styles["address"]}>{address}</p>
+        <p className={styles["desc"]}>{desc}</p>
 
         {/* Gói dịch vụ */}
         <div className={styles["room-package"]}>
@@ -69,19 +87,15 @@ const RoomCard = () => {
 
           <div className={styles["price-box"]}>
             <p className={styles["sub-price"]}>
-              Đăng ký và thanh toán <b>1.377.000₫</b>
+              Đăng ký và thanh toán <b>{price}₫</b>
             </p>
             <p className={styles["main-price"]}>
-              <span className={styles["old-price"]}>1.700.000₫</span>
-              <span className={styles["discount"]}>-10%</span>
-              <span className={styles["final-price"]}>1.530.000₫</span>
+              <span className={styles["old-price"]}>{oldPrice}₫</span>
+              <span className={styles["discount"]}>-{discount}%</span>
+              <span className={styles["final-price"]}>{price}₫</span>
             </p>
             <button className={styles["choose-btn"]}>Chọn</button>
           </div>
-
-          <button className={styles["view-all-btn"]}>
-            Xem tất cả các gói ⌄
-          </button>
         </div>
       </div>
 
@@ -89,17 +103,18 @@ const RoomCard = () => {
       <div className={styles["booking-box"]}>
         <h4>Đơn đặt phòng của tôi</h4>
         <div className={styles["stay-info"]}>
-          <p>1 đêm</p>
+          <p>{booking.nights} đêm</p>
           <p>
-            <b>21 tháng 8</b> — <b>22 tháng 8</b>
+            <b>{booking.checkIn}</b> — <b>{booking.checkOut}</b>
             <br />
-            Thứ Năm từ lúc 14:00
+            {booking.checkInDetail}
             <br />
-            Thứ Sáu đến 12:00
+            {booking.checkOutDetail}
           </p>
         </div>
       </div>
     </div>
   );
 };
+
 export default RoomCard;

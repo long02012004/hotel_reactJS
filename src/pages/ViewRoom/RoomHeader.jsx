@@ -33,6 +33,7 @@ const RoomHeader = () => {
               onChange={(d) => setDate(d)}
               dateFormat="dd/MM/yyyy"
               className={styles["date-picker"]}
+              id="checkin"
             />
             <span className={styles["calendar-icon"]}>📅</span>
           </div>

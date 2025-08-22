@@ -46,11 +46,11 @@ import hotel1 from "./hotel1.png";
 import hotel2 from "./hotel2.png";
 import hotel3 from "./hotel3.png";
 import hotel4 from "./hotel4.png";
-import hotel_1 from "./hotel1.jpg";
-import hotel_2 from "./hotel2.jpg";
-import hotel_3 from "./hotel3.jpg";
-import hotel_4 from "./hotel4.jpg";
-import hotel5 from "./hotel5.jpg";
+import hotel5 from "./hotel1.jpg";
+import hotel6 from "./hotel2.jpg";
+import hotel7 from "./hotel3.jpg";
+import hotel8 from "./hotel4.jpg";
+import hotel9 from "./hotel5.jpg";
 import house from "./house.jpg";
 import image_blog from "./image_blog.png";
 import image1_blog from "./image1_blog.png";
@@ -114,11 +114,11 @@ export {
   hotel2,
   hotel3,
   hotel4,
-  hotel_1,
-  hotel_2,
-  hotel_3,
-  hotel_4,
   hotel5,
+  hotel6,
+  hotel7,
+  hotel8,
+  hotel9,
   house,
   image_blog,
   image1_blog,
