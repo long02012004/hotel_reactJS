@@ -9,7 +9,8 @@ import {
   FaDog,
 } from "react-icons/fa";
 import { TbAirConditioning } from "react-icons/tb";
-import { CiWifiOn } from "react-icons/ci";
+import { CiWifiOn, CiGift } from "react-icons/ci";
+import { MdFoodBank, MdOutlineCancel, MdPayment } from "react-icons/md";
 
 const RoomCard = ({
   image,
@@ -79,10 +80,18 @@ const RoomCard = ({
         <div className={styles["room-package"]}>
           <h4>Room and Breakfast</h4>
           <ul>
-            <li>🍳 Đã BAO GỒM ăn sáng</li>
-            <li>❌ Chính sách huỷ bỏ</li>
-            <li>💳 Thanh toán: Thẻ ngân hàng</li>
-            <li>🎁 BAO GỒM: Wink Anytime: 24/7 Perks That Don’t Sleep</li>
+            <li>
+              <MdFoodBank /> Đã BAO GỒM ăn sáng
+            </li>
+            <li>
+              <MdOutlineCancel /> Chính sách huỷ bỏ
+            </li>
+            <li>
+              <MdPayment /> Thanh toán: Thẻ ngân hàng
+            </li>
+            <li>
+              <CiGift /> BAO GỒM: Wink Anytime: 24/7 Perks That Don’t Sleep
+            </li>
           </ul>
 
           <div className={styles["price-box"]}>
@@ -94,7 +103,7 @@ const RoomCard = ({
               <span className={styles["discount"]}>-{discount}%</span>
               <span className={styles["final-price"]}>{price}₫</span>
             </p>
-            <button className={styles["choose-btn"]}>Chọn</button>
+            <button className={styles["choose-btn"]}>Đặt</button>
           </div>
         </div>
       </div>
