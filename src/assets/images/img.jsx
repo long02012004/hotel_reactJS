@@ -64,8 +64,22 @@ import slider2 from "./slider2.png";
 import slider3 from "./slider3.png";
 import la from "./la.png";
 import blogPhu from "./blogPhu.png";
+import offers from "./offers.png";
+import offers1 from "./offers1.png";
+import offers2 from "./offers2.png";
+import offers3 from "./offers3.png";
+import offers5 from "./offers5.png";
+import offers6 from "./offers6.png";
+import offers7 from "./offers7.png";
 
 export {
+  offers,
+  offers1,
+  offers2,
+  offers3,
+  offers5,
+  offers6,
+  offers7,
   blogPhu,
   logo,
   rocket,

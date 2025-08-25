@@ -9,7 +9,7 @@ import Contact from "./pages/Contact/Contact.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Blog from "./pages/Blog/BlogPage.jsx";
 import Convenient from "./pages/Convenient/Convenient.jsx";
-import Endow from "./pages/Endow/Endow.jsx";
+import Offers from "./pages/Offers/OffersPage.jsx";
 import Food from "./pages/Food/Food.jsx";
 import Login from "./pages/LogIn/LogIn.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
@@ -25,7 +25,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="home" element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="convenient" element={<Convenient />} />
-          <Route path="endow" element={<Endow />} />
+          <Route path="offers" element={<Offers />} />
           <Route path="food" element={<Food />} />
           <Route path="profile" element={<Profile />} />
           <Route path="viewroom" element={<ViewRoom />} />
